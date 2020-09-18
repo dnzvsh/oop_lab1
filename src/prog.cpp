@@ -58,14 +58,17 @@ void diag_left(char **arr, char *new_arr, int n) {
 }
 
 void diag_right(char **arr, char *new_arr, int n) {
+  int count = 0;
   for (int i = 0; i < n; i++) {
     for (int j = 0; j <= i; j++) {
-      std::cout << arr[j][n - i + j - 1];
+      new_arr[count] = arr[j][n - i + j - 1];
+      count++;
     }
   }
   for (int i = 1; i < n; i++) {
     for (int j = 0; j < n - i; j++) {
-      std::cout << arr[i + j][j];
+      new_arr[count] << arr[i + j][j];
+      count++;
     }
   }
 }
