@@ -67,7 +67,7 @@ void diag_right(char **arr, char *new_arr, int n) {
   }
   for (int i = 1; i < n; i++) {
     for (int j = 0; j < n - i; j++) {
-      new_arr[count] << arr[i + j][j];
+      new_arr[count] = arr[i + j][j];
       count++;
     }
   }
